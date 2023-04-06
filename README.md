@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `Link`
 
-[https://preloboy.github.io/textUtils](https://preloboy.github.io/textUtils) to view it in your browser.
+[click here](https://preloboy.github.io/textUtils) to view it in your browser.
 
 ### `npm start`
 
