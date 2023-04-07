@@ -53,9 +53,9 @@ export default function TextUtils(props, event) {
                 <h5>Enter the text</h5>
                 <textarea className="form-cotrol w-100 p-3" rows='5' name="" id="textbox" value={text} onChange={onchange} placeholder='Type here...'></textarea>
                 <div className="d-flex flex-wrap justify-content-between">
-                    <button className='btn btn-primary m-1' onClick={toUP}>Upper Case</button>
-                    <button className='btn btn-primary m-1' onClick={toEC}>Capitalize Words</button>
-                    <button className='btn btn-primary m-1' onClick={toLC}>Lower Case</button>
+                    <button disabled={text.length===0} className='btn btn-primary m-1' onClick={toUP}>Upper Case</button>
+                    <button disabled={text.length===0} className='btn btn-primary m-1' onClick={toEC}>Capitalize Words</button>
+                    <button disabled={text.length===0} className='btn btn-primary m-1' onClick={toLC}>Lower Case</button>
                 </div>
             </div>
             <div className="container-fluid">
