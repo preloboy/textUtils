@@ -36,9 +36,9 @@ function App() {
   }
   return (
     <>
-        <Alerts alert={alert}/>
         <Navbar title="Text Utils" mode={mode} changeMode={changeMode} />
-        <TextUtils mode={mode}/>
+        <Alerts alert={alert}/>
+        <TextUtils mode={mode} showAlert={showAlert}/>
       {/* <BrowserRouter>
         <Alerts alert={alert}/>
         <Navbar title="Text Utils" mode={mode} changeMode={changeMode} />

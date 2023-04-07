@@ -40,11 +40,10 @@ export default function TextUtils(props, event) {
         try {
             navigator.clipboard.writeText(text)
             document.getElementById('copied').innerText = 'Copied'
-            // props.showAlert("Copied to Clipboard", "Succes")
+            props.showAlert("Copied to Clipboard", "Succes")
         } catch (e) {
             console.log('Error copying text:', e)
         };
-        props.showAlert('Copied to Clipboard', 'Done')
     }
 
     // Render the TextU component

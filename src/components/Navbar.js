@@ -9,12 +9,12 @@ export default function Navbar(props) {
       <div className="container-fluid">
         <div className='d-flex flex-row'>
           {/* Render the navbar toggle button */}
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           {/* Render the navbar brand and set its text to the "title" prop */}
           {/* <Link className="navbar-brand mx-3" to="/">{props.title}</Link> */}
-          <a className="navbar-brand mx-3" href="/">{props.title}</a>
+          <a className="navbar-brand" href="/">{props.title}</a>
         </div>
         {/* Render the navbar menu with navigation links */}
         <div className="collapse navbar-collapse" id="navbarNav">
