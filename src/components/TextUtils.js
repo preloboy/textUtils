@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 // TextU component
 export default function TextUtils(props, event) {
 
-
+    // console.log(props)
     // Declare a state variable called `text`, and initialize it to an empty string
     const [text, setText] = useState('');
 
@@ -15,7 +15,7 @@ export default function TextUtils(props, event) {
     // Convert text to upper case
     const toUP = () => {
         let textUP = text.toUpperCase();
-        setText(textUP)
+        setText(textUP);
         console.log('Converted text to upper case')
     }
 
@@ -40,9 +40,11 @@ export default function TextUtils(props, event) {
         try {
             navigator.clipboard.writeText(text)
             document.getElementById('copied').innerText = 'Copied'
+            // props.showAlert("Copied to Clipboard", "Succes")
         } catch (e) {
             console.log('Error copying text:', e)
-        }
+        };
+        props.showAlert('Copied to Clipboard', 'Done')
     }
 
     // Render the TextU component
@@ -59,7 +61,7 @@ export default function TextUtils(props, event) {
             </div>
             <div className="container-fluid">
                 <h5>Text Summery</h5>
-                <p>{text.split(" ").length - 1} words and {text.length} characters</p>
+                <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
                 <div className="d-flex flex-column">
                     <div className="border rounded w-100 p-3">
                         <p className='font-weight-normal' id='output'>{text.length > 0 ? text : <b>Processed output will be shown here ... </b>}</p>
